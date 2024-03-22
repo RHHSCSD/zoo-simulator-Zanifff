@@ -6,7 +6,7 @@ package zoosim;
 
 /**
  *
- * @author michael.roy-diclemen
+ * @author patrick wei
  */
 public class ZooSim {
 
