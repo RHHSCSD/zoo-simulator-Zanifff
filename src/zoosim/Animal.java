@@ -226,6 +226,7 @@ public class Animal implements IEntity {
     /**
      * Prints out sound of animal
      */
+    @Override
     public void makeSound() {
         System.out.println(getSound());
     }
@@ -233,10 +234,11 @@ public class Animal implements IEntity {
     /**
      * moves the animals coordinates based on its direction
      */
+    @Override
     public void move() {
         double radians = ((double)(getDirection()) * Math.PI / 180) ;
-        int moveX = 0;
-        int moveY = 0;
+        int moveX;
+        int moveY;
         moveX = (int) (Math.cos(radians) * getSpeed());
         moveY = (int) (Math.sin(radians) * getSpeed());
         setxCoord(getxCoord() + moveX);
@@ -251,6 +253,7 @@ public class Animal implements IEntity {
      * @param x
      * @param y
      */
+    @Override
     public void place(int x, int y) {
         //???
     }
@@ -258,6 +261,7 @@ public class Animal implements IEntity {
     /**
      * resets animals hunger to full
      */
+    @Override
     public void eat(){
         setHunger(100.0);
         System.out.println(getName() + " hunger restored to full");
@@ -266,6 +270,7 @@ public class Animal implements IEntity {
     /**
      * resets animals fatigue to full
      */
+    @Override
     public void sleep(){
         setFatigue(100.0);
         System.out.println(getName() + " fatigue restored to full");
@@ -274,6 +279,7 @@ public class Animal implements IEntity {
      * turns the animal anticlockwise
      * @param degrees the amount of degrees to turn if positive
      */
+    @Override
     public void turn(int degrees){
         setDirection(getDirection() + degrees);
         if(getDirection() >= 360){ //keeping the numbers nice by finding the smallest equivalent angle

@@ -10,7 +10,37 @@ package zoosim;
  */
 public class WaterAnim extends Animal implements ISwimmable {
     
-    public boolean canBreathe;
-    public boolean canSurface;
+    private boolean canBreathe;
+    private boolean canSurface = true;
+    
+
+    /**
+     * @return the canBreathe
+     */
+    public boolean isCanBreathe() {
+        return canBreathe;
+    }
+
+    /**
+     * @param canBreathe the canBreathe to set
+     */
+    public void setCanBreathe(boolean canBreathe) {
+        this.canBreathe = canBreathe;
+    }
+
+    /**
+     * @return the canSurface
+     */
+    @Override
+    public boolean canSurface() {
+        return canSurface;
+    }
+
+    /**
+     * @param canSurface the canSurface to set
+     */
+    public void setCanSurface(boolean canSurface) {
+        this.canSurface = canSurface;
+    }
     
 }
