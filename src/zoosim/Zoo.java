@@ -4,6 +4,19 @@
  */
 package zoosim;
 
+//QUESTIONS
+//the animal class would probably need to have more varibles (HP int, hiearchy int)
+//add a method that once health or hunger is 0, delete animal
+//expand animal class into predators and prey
+//for predators, add a method that checks other animals and determines if touching another animal based on location and size
+//if touching prey animal with a lesser heiarchy (cant have cats eating fully grown cows), start filling hunger
+//add same checking method for prey
+//if touching predator animal, start decreasing health
+//if touching plant object, delete plant object and increase hunger
+//omnivores just do both
+
+
+
 /**
  *
  * @author patri
